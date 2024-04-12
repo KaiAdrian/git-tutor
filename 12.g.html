@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+  </head>
+
+  <body>
+    <script>
+      // let title = document.title;
+
+      setInterval(() => {
+        if (document.title === 'Doc') {
+          document.title = '(2) Novo sporočilo';
+        } else if (document.title === '(2) Novo sporočilo') {
+          document.title = 'Doc';
+        }
+      }, 1000)
+      console.log("Žijo Git!");
+    </script>
+  </body>
+
+</html>

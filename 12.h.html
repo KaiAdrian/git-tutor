@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button class="add-btn">Dodaj</button>
+    <button class="vzom-btn">Odstrani</button>
+
+    <script>
+      let messSt = 1;
+
+      document.querySelector('.add-btn')
+        .addEventListener('click', () => {
+          messSt++;
+          console.log(messSt);
+        });
+      document.querySelector('.vzom-btn')
+        .addEventListener('click', () => {
+          messSt--;
+          console.log(messSt);
+        });
+
+
+      setInterval(() => {
+        if (document.title === 'Document') {
+          document.title = `(${messSt}) Novo sporočilo`;
+        } else if (document.title === `(${messSt}) Novo sporočilo`) {
+          document.title = 'Document';
+        }
+      }, 1000)
+    </script>
+  </body>
+
+</html>
